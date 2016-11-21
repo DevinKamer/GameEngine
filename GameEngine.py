@@ -60,7 +60,7 @@ def combat(one, two):
 
 if __name__ == "__main__":
     hero = Character()
-    orc = Monster(name = "Dorque da Orc")
+    orc = random_monster()
 
     combat(hero, orc)
 
