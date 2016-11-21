@@ -66,6 +66,45 @@ class Orc(Monster):
                                   intelligence, dexterity, numberOfPotions,
                                   inventory, aggression, awareness, fear)
 
+class Brownie(Monster):
+    """Generic Brownie class"""
+    def __init__(self,
+                 name = "Chcolate Brownie",
+                 speed = 20,
+                 stamina = 25,
+                 strength = 7,
+                 intelligence = 14,
+                 dexterity = 18,
+                 numberOfPotions = 2,
+                 inventory = []
+                 agression = 50,
+                 awareness = 70,
+                 fear = 90):
+        super(Brownie, self).__init__(name, maxHealth, speed, stamina, strength,
+                                  intelligence, dexterity, numberOfPotions,
+                                  inventory, aggression, awareness, fear)
+
+class Troll(Monster):
+    """ generic Troll class """
+    def __init__(self,
+                 name = "Internet Troll",
+                 speed = 30,
+                 stamina = 50,
+                 strength = 21,
+                 intelligence = 6,
+                 dexterity = 14,
+                 numberOfPotions = 1,
+                 inventory = []
+                 agression = 100,
+                 awareness = 0,
+                 fear = -100):
+        super(Troll, self).__init__(name, maxHealth, speed, stamina, strength,
+                                  intelligence, dexterity, numberOfPotions,
+                                  inventory, aggression, awareness, fear)
+    def get_damage(self, damage):
+        self.health -= damage
+        self.health += randint(1, 8)
+
 
 def random_monster():
     '''generate a monster at random

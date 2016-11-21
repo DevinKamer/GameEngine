@@ -158,7 +158,7 @@ class Character(object):
         attack = randint(1,20) + self.strBonus + self.weapon.attack
         if attack >= enemy.AC:
             damage = self.weapon.damage + self.strBonus
-            enemy.health -= damage
+            enemy.get_damage(damage)
             success = True
             message = self.name + " hits " + enemy.name + " and does " +\
                       str(damage) + " damage."
@@ -166,6 +166,11 @@ class Character(object):
             message = self.name + " misses " + enemy.name + "."
 
         return success, message
+
+
+    def get_damage(self, damage):
+        """ inflicts damage from an outside source """
+        self.health -= damage
 
     def combat_choice(self):
         ''' player's combat choices'''
