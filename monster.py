@@ -98,7 +98,7 @@ class Brownie(Monster):
                  awareness = 70,
                  fear = 90):
         super(Brownie, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  dexterity, consitution, intelligence, wisdom,
+                                  dexterity, constitution, intelligence, wisdom,
                                   charisma, numberOfPotions, inventory, aggression, awareness, fear)
 
 class Troll(Monster):
@@ -120,7 +120,7 @@ class Troll(Monster):
                  awareness = 0,
                  fear = -100):
         super(Troll, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  dexterity, consitution, intelligence, wisdom,
+                                  dexterity, constitution, intelligence, wisdom,
                                   charisma, numberOfPotions, inventory, aggression, awareness, fear)
     def get_damage(self, damage):
         self.health -= damage
@@ -145,7 +145,7 @@ class Cloud_Giant(Monster):
                  awareness = 50,
                  fear = 25):
         super(Cloud_Giant, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  dexterity, consitution, intelligence, wisdom,
+                                  dexterity, constitution, intelligence, wisdom,
                                   charisma, numberOfPotions, inventory, aggression, awareness, fear)
 
 
@@ -168,7 +168,7 @@ class Guardian_Dragon(Monster):
                  awareness = 75,
                  fear = 0):
         super(Guardian_Dragon, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  dexterity, consitution, intelligence, wisdom,
+                                  dexterity, constitution, intelligence, wisdom,
                                   charisma, numberOfPotions, inventory, aggression, awareness, fear)
     @property
     def AC(self):
