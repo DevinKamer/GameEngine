@@ -247,11 +247,11 @@ def create_player():
 
 if __name__ == "__main__":
     #hero = Character()
-    #orc = random_monster()
+    orc = random_monster()
     hero = create_player()
     print(hero)
     #hero = Character()
-    orc = Monster(name = "Dorque da Orc")
+    #orc = Monster(name = "Dorque da Orc")
 
     combat(hero, orc)
 

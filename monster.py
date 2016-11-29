@@ -87,16 +87,19 @@ class Brownie(Monster):
                  speed = 20,
                  stamina = 25,
                  strength = 7,
-                 intelligence = 14,
                  dexterity = 18,
+                 constitution = 12,
+                 intelligence = 14,
+                 wisdom = 15,
+                 charisma = 17,
                  numberOfPotions = 2,
                  inventory = [],
                  aggression = 50,
                  awareness = 70,
                  fear = 90):
         super(Brownie, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  intelligence, dexterity, numberOfPotions,
-                                  inventory, aggression, awareness, fear)
+                                  dexterity, consitution, intelligence, wisdom,
+                                  charisma, numberOfPotions, inventory, aggression, awareness, fear)
 
 class Troll(Monster):
     """ generic Troll class """
@@ -106,16 +109,19 @@ class Troll(Monster):
                  speed = 30,
                  stamina = 50,
                  strength = 21,
-                 intelligence = 6,
                  dexterity = 14,
+                 constitution = 23,
+                 intelligence = 6,
+                 wisdom = 9,
+                 charisma = 6,
                  numberOfPotions = 1,
                  inventory = [],
                  aggression = 100,
                  awareness = 0,
                  fear = -100):
         super(Troll, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  intelligence, dexterity, numberOfPotions,
-                                  inventory, aggression, awareness, fear)
+                                  dexterity, consitution, intelligence, wisdom,
+                                  charisma, numberOfPotions, inventory, aggression, awareness, fear)
     def get_damage(self, damage):
         self.health -= damage
         self.health += randint(1, 8)
@@ -128,16 +134,19 @@ class Cloud_Giant(Monster):
                  speed = 50,
                  stamina = 50,
                  strength = 35,
-                 intelligence = 12,
                  dexterity = 13,
+                 constitution = 23,
+                 intelligence = 12,
+                 wisdom = 16,
+                 charisma = 12,
                  numberOfPotions = 1,
                  inventory = [],
                  aggression = 50,
                  awareness = 50,
                  fear = 25):
         super(Cloud_Giant, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  intelligence, dexterity, numberOfPotions,
-                                  inventory, aggression, awareness, fear)
+                                  dexterity, consitution, intelligence, wisdom,
+                                  charisma, numberOfPotions, inventory, aggression, awareness, fear)
 
 
 class Guardian_Dragon(Monster):
@@ -148,16 +157,19 @@ class Guardian_Dragon(Monster):
                  speed = 50,
                  stamina = 75,
                  strength = 38,
-                 intelligence = 15,
                  dexterity = 13,
+                 constitution = 30,
+                 intelligence = 15,
+                 wisdom = 24,
+                 charisma = 25,
                  numberOfPotions = 0,
                  inventory = [],
                  aggression = 100,
                  awareness = 75,
                  fear = 0):
         super(Guardian_Dragon, self).__init__(name, maxHealth, speed, stamina, strength,
-                                  intelligence, dexterity, numberOfPotions,
-                                  inventory, aggression, awareness, fear)
+                                  dexterity, consitution, intelligence, wisdom,
+                                  charisma, numberOfPotions, inventory, aggression, awareness, fear)
     @property
     def AC(self):
         return 30 + self.dexBonus + self.armor.defense
